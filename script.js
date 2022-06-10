@@ -12,8 +12,13 @@ window.onload = function(){
         clearInterval(Interval);
         Interval = setInterval(startTimer, 10);  // millisecond 10 = 0.01 second
     });
-
-
+buttonStop.addEventListener('click', () => {clearInterval(Interval);});
+buttonReset.addEventListener('click', () => {clearInterval(Interval);
+tens = "00";
+seconds = "00";
+OutputSeconds.innerHTML = seconds;
+OutputTens.innerHTML = tens;
+})
 
     function startTimer(){
         tens++;
